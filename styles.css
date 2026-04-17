@@ -1060,11 +1060,11 @@ body::after {
 
 .demo-link-url {
   color: var(--text);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.45;
   text-decoration: none;
-  word-break: break-word;
+  white-space: nowrap;
 }
 
 .demo-link-url:hover {
@@ -1090,12 +1090,6 @@ body::after {
   color: var(--text);
   font-size: 18px;
   line-height: 1.45;
-}
-
-.qr-hint {
-  color: var(--muted);
-  line-height: 1.7;
-  font-size: 14px;
 }
 
 .qr-link {
