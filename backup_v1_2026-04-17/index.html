@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>金铲铲之战 AI 个性化活动推送方案</title>
+    <meta
+      name="description"
+      content="面向《金铲铲之战》的 AI 个性化活动推送方案，以网页化项目报告形式呈现玩家分层、活动匹配、内容生成与效果评估。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">铲</div>
+          <div>
+            <p class="eyebrow">AI Strategy Operation / 弈士指挥台</p>
+            <h1>金铲铲个性化活动中枢</h1>
+          </div>
+        </div>
+        <nav class="topnav">
+          <a href="#problem">问题</a>
+          <a href="#players">玩家</a>
+          <a href="#activity-pool">活动池</a>
+          <a href="#ai-flow">AI链路</a>
+          <a href="#models">模型</a>
+          <a href="#cards">活动卡</a>
+          <a href="#metrics">评估</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero section" id="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">网易 AI策略运营笔试作品 / HTML 可视化项目报告</p>
+            <h2>不是每个玩家，<br />都该看到同一张活动卡</h2>
+            <p class="hero-subtitle">
+              面向《金铲铲之战》的 AI 个性化活动推送方案。用玩家分层、活动匹配、内容生成与实验验证，重构活动运营的最后一公里。
+            </p>
+
+            <div class="hero-meta">
+              <div class="meta-card">
+                <span>目标游戏</span>
+                <strong>金铲铲之战</strong>
+              </div>
+              <div class="meta-card">
+                <span>核心目标</span>
+                <strong>提升活动参与率</strong>
+              </div>
+              <div class="meta-card">
+                <span>方案输出</span>
+                <strong>AI 个性化活动卡片</strong>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a class="primary-btn" href="#problem">查看方案</a>
+              <a class="ghost-btn" href="#cards">看活动卡示例</a>
+            </div>
+
+            <div class="hero-tags">
+              <span>玩家分层</span>
+              <span>活动匹配</span>
+              <span>模板生成</span>
+              <span>A/B 测试</span>
+            </div>
+
+            <div class="hero-runes">
+              <div class="rune-card">
+                <span>赛季母题</span>
+                <strong>天选福星 / 返场活动环境</strong>
+              </div>
+              <div class="rune-card">
+                <span>推送通道</span>
+                <strong>活动中心 / 登录承接 / 召回触达</strong>
+              </div>
+              <div class="rune-card">
+                <span>设计语言</span>
+                <strong>棋盘、段位、羁绊卡、赛季任务面板</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-stage">
+            <div class="board-glow"></div>
+            <div class="board-lattice"></div>
+            <div class="hero-panel panel">
+              <div class="panel-head">
+                <span class="status-dot"></span>
+                <p>AI Activity Command Center</p>
+              </div>
+              <div class="command-ribbon">
+                <span>活动中台</span>
+                <span>赛季棋盘</span>
+                <span>个性化分发</span>
+              </div>
+              <div class="hero-grid">
+                <article class="floating-card tier-card tier-rank">
+                  <span class="card-label">冲段激励卡</span>
+                  <h3>距离下一档奖励只差一步</h3>
+                  <p>周末 1.5 倍符石精粹开启，今晚最适合冲一波。</p>
+                </article>
+                <article class="floating-card tier-card tier-fun">
+                  <span class="card-label">趣味挑战卡</span>
+                  <h3>今天不卷标准排位</h3>
+                  <p>来一局高费爽局，适合今晚和好友开黑。</p>
+                </article>
+                <article class="floating-card tier-card tier-growth">
+                  <span class="card-label">成长引导卡</span>
+                  <h3>先完成这 3 个任务</h3>
+                  <p>最快拿到第一批奖励，也更容易看懂当前赛季。</p>
+                </article>
+                <article class="floating-card tier-card tier-return">
+                  <span class="card-label">回归召回卡</span>
+                  <h3>这次回来不用从头补课</h3>
+                  <p>系统已经替你追了一大截，先回来看看也不亏。</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="overview-stats section">
+          <div class="stat-block panel">
+            <span>4 类核心玩家</span>
+            <strong>上分 / 娱乐 / 新手 / 回流</strong>
+          </div>
+          <div class="stat-block panel">
+            <span>4 类核心活动池</span>
+            <strong>冲分 / 趣味 / 成长 / 回归</strong>
+          </div>
+          <div class="stat-block panel">
+            <span>1 套推荐引擎</span>
+            <strong>规则筛选 + 模型排序 + 模板生成</strong>
+          </div>
+          <div class="stat-block panel">
+            <span>1 个验证闭环</span>
+            <strong>指标看板 + A/B 测试</strong>
+          </div>
+        </section>
+
+        <section class="section split-section" id="problem">
+          <div class="section-heading">
+            <p class="eyebrow">Problem Definition</p>
+            <h2>从统一广播，到差异化触达</h2>
+          </div>
+          <div class="split-layout">
+            <div class="panel prose-panel">
+              <p class="lead">
+                《金铲铲之战》的活动并不稀缺，稀缺的是“让对的人，在对的时机，看见对的活动”。
+              </p>
+              <p>
+                上分玩家在意段位和版本答案，休闲玩家更在意轻松和新鲜感，新手需要明确引导，回流玩家则最怕重新补课。
+              </p>
+              <p>
+                当他们收到同一套活动推送时，损耗的不是活动数量，而是活动相关性。
+              </p>
+            </div>
+
+            <div class="stack">
+              <div class="panel contrast-panel">
+                <div>
+                  <p class="mini-title">传统推送</p>
+                  <ul>
+                    <li>同样的活动页</li>
+                    <li>同样的标题</li>
+                    <li>同样的入口</li>
+                    <li>同样的推送时机</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="mini-title">AI 个性化推送</p>
+                  <ul>
+                    <li>识别当前玩家类型</li>
+                    <li>匹配更适合的活动池</li>
+                    <li>生成不同表达方式</li>
+                    <li>在更可能响应的时间触达</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel quote-panel">
+                <p class="mini-title">现实侧证</p>
+                <p>
+                  2025 年 1 月，《金铲铲之战》官方在“纳财聚福礼”活动帖中提到，过去版本收到了玩家对活动参与的反馈，因此在“天选福星”返场时，对活动类型与入口进行了重新梳理整合。
+                </p>
+                <a
+                  href="https://www.taptap.cn/moment/628185331623003938"
+                  target="_blank"
+                  rel="noreferrer"
+                  >查看来源</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="players">
+          <div class="section-heading">
+            <p class="eyebrow">Player Segments</p>
+            <h2>同一片棋盘，不同的玩家目标</h2>
+            <p>
+              玩家不是被动接收活动的人，而是被不同动机驱动的决策者。
+            </p>
+          </div>
+
+          <div class="player-grid">
+            <article class="player-card panel">
+              <div class="player-top">
+                <span class="player-badge">01</span>
+                <div>
+                  <p class="role-tag">Competitive Climber</p>
+                  <h3>上分冲段玩家</h3>
+                </div>
+              </div>
+              <p class="player-quote">我想更快上分，而不是被无关活动打断节奏。</p>
+              <ul class="compact-list">
+                <li>登录稳定，排位参与高</li>
+                <li>对版本变化敏感</li>
+                <li>关注段位、胜率与效率</li>
+              </ul>
+              <div class="player-links">
+                <span>开服冲级活动</span>
+                <span>欢乐弈夏</span>
+                <span>公开赛全民赛道</span>
+              </div>
+            </article>
+
+            <article class="player-card panel">
+              <div class="player-top">
+                <span class="player-badge">02</span>
+                <div>
+                  <p class="role-tag">Casual Fun Seeker</p>
+                  <h3>休闲娱乐玩家</h3>
+                </div>
+              </div>
+              <p class="player-quote">我想轻松玩得开心，不想每次都像打考试。</p>
+              <ul class="compact-list">
+                <li>活跃不一定稳定</li>
+                <li>更偏好友开黑和轻松模式</li>
+                <li>更容易被新鲜玩法吸引</li>
+              </ul>
+              <div class="player-links">
+                <span>恭喜发财</span>
+                <span>冠军乱斗</span>
+                <span>小飞吉的试炼</span>
+              </div>
+            </article>
+
+            <article class="player-card panel">
+              <div class="player-top">
+                <span class="player-badge">03</span>
+                <div>
+                  <p class="role-tag">Newcomer</p>
+                  <h3>新手入坑玩家</h3>
+                </div>
+              </div>
+              <p class="player-quote">我需要知道先做什么，才能更快融入这个赛季。</p>
+              <ul class="compact-list">
+                <li>对赛季结构不熟</li>
+                <li>需要清晰引导而非复杂选择</li>
+                <li>更需要快速建立成就感</li>
+              </ul>
+              <div class="player-links">
+                <span>天选福星·宝典</span>
+                <span>弈士集结</span>
+                <span>新春要闻</span>
+              </div>
+            </article>
+
+            <article class="player-card panel">
+              <div class="player-top">
+                <span class="player-badge">04</span>
+                <div>
+                  <p class="role-tag">Returnee</p>
+                  <h3>回流玩家</h3>
+                </div>
+              </div>
+              <p class="player-quote">别让我一回来就重新学一整套，我需要先找回熟悉感。</p>
+              <ul class="compact-list">
+                <li>曾经活跃，但对当前版本认知断层</li>
+                <li>容易因为补课成本再次流失</li>
+                <li>依赖低门槛回归承接</li>
+              </ul>
+              <div class="player-links">
+                <span>故友重逢</span>
+                <span>铲铲拜年礼</span>
+                <span>魔典补全计划</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="activity-pool">
+          <div class="section-heading">
+            <p class="eyebrow">Activity Pool</p>
+            <h2>活动不是不够多，而是没有被准确分发</h2>
+          </div>
+          <div class="activity-matrix">
+            <article class="pool-card panel pool-rank">
+              <p class="mini-title">赛季冲分型活动</p>
+              <h3>冲段激励卡</h3>
+              <p>段位目标 / 里程碑奖励 / 赛季窗口 / 周末加速</p>
+              <ul class="compact-list">
+                <li>开服冲级活动</li>
+                <li>欢乐弈夏</li>
+                <li>公开赛全民赛道</li>
+              </ul>
+            </article>
+            <article class="pool-card panel pool-fun">
+              <p class="mini-title">娱乐趣味型活动</p>
+              <h3>趣味挑战卡</h3>
+              <p>爽局体验 / 新鲜玩法 / 快节奏 / 联动氛围</p>
+              <ul class="compact-list">
+                <li>恭喜发财</li>
+                <li>冠军乱斗</li>
+                <li>小飞吉的试炼</li>
+              </ul>
+            </article>
+            <article class="pool-card panel pool-growth">
+              <p class="mini-title">成长引导型活动</p>
+              <h3>成长引导卡</h3>
+              <p>成长路径 / 任务驱动 / 低理解成本 / 版本导览</p>
+              <ul class="compact-list">
+                <li>天选福星·宝典</li>
+                <li>弈士集结</li>
+                <li>新春要闻</li>
+              </ul>
+            </article>
+            <article class="pool-card panel pool-return">
+              <p class="mini-title">回归激活型活动</p>
+              <h3>回归召回卡</h3>
+              <p>低门槛回归 / 追赶机制 / 社交召回 / 登录即得</p>
+              <ul class="compact-list">
+                <li>故友重逢</li>
+                <li>铲铲拜年礼</li>
+                <li>魔典补全计划</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="ai-flow">
+          <div class="section-heading">
+            <p class="eyebrow">AI Recommendation Flow</p>
+            <h2>从玩家状态到活动卡片，AI 负责中间这条链路</h2>
+            <p>系统追求的不是最复杂的算法，而是最清楚的运营决策路径。</p>
+          </div>
+
+          <div class="flow-rail panel">
+            <button class="flow-step active" data-flow="input">
+              <span>01</span>
+              <strong>玩家画像输入</strong>
+            </button>
+            <button class="flow-step" data-flow="decision">
+              <span>02</span>
+              <strong>规则筛选</strong>
+            </button>
+            <button class="flow-step" data-flow="ranking">
+              <span>03</span>
+              <strong>模型排序</strong>
+            </button>
+            <button class="flow-step" data-flow="generation">
+              <span>04</span>
+              <strong>模板生成</strong>
+            </button>
+            <button class="flow-step" data-flow="delivery">
+              <span>05</span>
+              <strong>时机触达</strong>
+            </button>
+          </div>
+
+          <div class="flow-detail panel">
+            <div class="flow-copy active" data-flow-panel="input">
+              <h3>玩家画像输入</h3>
+              <p>
+                系统先读取基础身份、活跃状态、玩法偏好和历史活动响应特征，判断玩家当前所处的生命周期阶段。
+              </p>
+              <div class="detail-tags">
+                <span>等级 / 注册时长</span>
+                <span>最近 7 日对局数</span>
+                <span>排位 / 娱乐偏好</span>
+                <span>历史点击率 / 参与率</span>
+              </div>
+            </div>
+
+            <div class="flow-copy" data-flow-panel="decision">
+              <h3>规则筛选</h3>
+              <p>
+                先用可解释规则排除明显不相关的活动池。新手优先进入成长池，回流玩家优先进入回归池，高活跃排位玩家优先进入冲分池。
+              </p>
+              <div class="detail-tags">
+                <span>新手 -> 成长池</span>
+                <span>回流 -> 回归池</span>
+                <span>高排位活跃 -> 冲分池</span>
+              </div>
+            </div>
+
+            <div class="flow-copy" data-flow-panel="ranking">
+              <h3>模型排序</h3>
+              <p>
+                在候选活动中，系统综合玩家特征、活动特征与历史反馈，预测哪张卡最可能被点击并真正参与。
+              </p>
+              <div class="detail-tags">
+                <span>点击概率</span>
+                <span>参与概率</span>
+                <span>主目标：参与率最大化</span>
+              </div>
+            </div>
+
+            <div class="flow-copy" data-flow-panel="generation">
+              <h3>模板化生成 + 大模型润色</h3>
+              <p>
+                确定活动方向后，系统先锁定卖点、语气、奖励强调点，再用生成模型完成标题和摘要改写，保证风格统一与信息准确。
+              </p>
+              <div class="detail-tags">
+                <span>标题生成</span>
+                <span>摘要生成</span>
+                <span>卖点强化</span>
+              </div>
+            </div>
+
+            <div class="flow-copy" data-flow-panel="delivery">
+              <h3>时机触达</h3>
+              <p>
+                最终输出的不是一条静态消息，而是一张在合适时间出现的个性化活动卡片。
+              </p>
+              <div class="detail-tags">
+                <span>周末高活跃窗口</span>
+                <span>回流首登</span>
+                <span>好友在线时段</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="models">
+          <div class="section-heading">
+            <p class="eyebrow">Model Selection</p>
+            <h2>算法模型选择</h2>
+            <p>
+              这套方案不依赖单一“大模型”包打天下，而是按任务拆分：先识别玩家，再排序活动，最后生成表达。
+            </p>
+          </div>
+
+          <div class="panel model-principles">
+            <p class="mini-title">选择原则</p>
+            <div class="principle-list">
+              <div>
+                <strong>可解释</strong>
+                <span>运营需要知道为什么推这张卡，而不是接受黑盒结果。</span>
+              </div>
+              <div>
+                <strong>可落地</strong>
+                <span>优先选择业务团队更容易上线、迭代和验证的轻量方案。</span>
+              </div>
+              <div>
+                <strong>可控制</strong>
+                <span>涉及活动文案与奖励表达时，必须保证信息准确和风格稳定。</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="model-grid">
+            <article class="panel model-card model-segment">
+              <p class="mini-title">模型 01</p>
+              <h3>分层模型</h3>
+              <p class="model-purpose">任务：识别玩家属于哪类核心人群</p>
+              <ul class="compact-list">
+                <li>目标：区分上分、娱乐、新手、回流四类玩家</li>
+                <li>输入：登录频次、段位、玩法偏好、历史活跃与沉默天数</li>
+                <li>建议：聚类 + 规则修正，或轻量分类模型</li>
+              </ul>
+              <p class="model-why">
+                选择理由：这一步最重要的是可解释，要让运营知道玩家为什么被归到这类。
+              </p>
+              <div class="model-note">
+                <strong>为什么不用更复杂的深度模型：</strong>
+                <span>当前场景下，玩家分层首先服务运营策略制定，解释性优先于极限精度。</span>
+              </div>
+            </article>
+
+            <article class="panel model-card model-rank">
+              <p class="mini-title">模型 02</p>
+              <h3>推荐 / 排序模型</h3>
+              <p class="model-purpose">任务：从候选活动中选出最值得推的一张卡</p>
+              <ul class="compact-list">
+                <li>目标：预测点击率与参与概率</li>
+                <li>输入：玩家特征、活动特征、历史活动反馈、版本热点</li>
+                <li>建议：轻量排序模型或多目标打分模型</li>
+              </ul>
+              <p class="model-why">
+                选择理由：题目核心是“个性化活动推送”，真正决定推什么的是排序能力，而不是单纯分群。
+              </p>
+              <div class="model-note">
+                <strong>为什么不用纯规则系统：</strong>
+                <span>纯规则能筛掉明显不相关活动，但很难在多个候选活动中持续学到“谁更可能真正参与”。</span>
+              </div>
+            </article>
+
+            <article class="panel model-card model-generate">
+              <p class="mini-title">模型 03</p>
+              <h3>内容生成模型</h3>
+              <p class="model-purpose">任务：把同一活动翻译成不同玩家更愿意点开的表达</p>
+              <ul class="compact-list">
+                <li>目标：生成标题、摘要、奖励强调点</li>
+                <li>输入：玩家标签、活动类型、触达时机、奖励重点</li>
+                <li>建议：模板化生成 + 大模型润色 / 改写</li>
+              </ul>
+              <p class="model-why">
+                选择理由：完全自由生成风险太高，模板约束下生成更符合真实运营场景，也更适合笔试表达。
+              </p>
+              <div class="model-note">
+                <strong>为什么不是端到端大模型：</strong>
+                <span>活动推送涉及规则、奖励、时效和品牌语气，模板约束下生成更安全，也更容易复盘优化。</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="panel model-summary">
+            <p class="mini-title">整体选择逻辑</p>
+            <h3>为什么不是只用一个模型？</h3>
+            <p>
+              因为这个问题同时包含“识别谁”“决定推什么”“决定怎么说”三类任务。把三件事拆开，更贴近真实业务落地。
+            </p>
+            <div class="summary-track">
+              <span>分层模型解决“玩家是谁”</span>
+              <span>排序模型解决“活动推什么”</span>
+              <span>生成模型解决“活动怎么说”</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="cards">
+          <div class="section-heading">
+            <p class="eyebrow">Personalized Activity Cards</p>
+            <h2>同一个系统，不同玩家，看到完全不同的活动卡</h2>
+            <p>切换玩家类型，查看推荐卡片、推荐理由和推送时机。</p>
+          </div>
+
+          <div class="card-experience">
+            <div class="persona-switch panel">
+              <button class="persona-tab active" data-persona="rank">上分冲段</button>
+              <button class="persona-tab" data-persona="fun">休闲娱乐</button>
+              <button class="persona-tab" data-persona="growth">新手入坑</button>
+              <button class="persona-tab" data-persona="return">回流玩家</button>
+            </div>
+
+            <div class="card-preview panel">
+              <div class="preview-shell">
+                <div class="preview-card active" data-card="rank">
+                  <span class="card-type">冲段激励卡</span>
+                  <h3>距离下一档奖励只差一步，今天这局值得认真打</h3>
+                  <p>
+                    你已进入目标段位边缘，周末符石精粹 1.5 倍开启中。继续完成排位目标，可以同时推进段位奖励和兑换资源。
+                  </p>
+                  <div class="preview-meta">
+                    <span>奖励重点：段位奖励 / 符石精粹加速</span>
+                    <span>推送时机：周五 20:30</span>
+                  </div>
+                </div>
+
+                <div class="preview-card" data-card="fun">
+                  <span class="card-type">趣味挑战卡</span>
+                  <h3>今天不卷标准排位，来一局高费爽局</h3>
+                  <p>
+                    「恭喜发财」模式已开启，开局高费弈子 + 专属神器，更容易成型高星阵容。适合今晚和好友开黑，轻松打一局爽局。
+                  </p>
+                  <div class="preview-meta">
+                    <span>奖励重点：高福利玩法 / 好友同玩</span>
+                    <span>推送时机：周六 21:00</span>
+                  </div>
+                </div>
+
+                <div class="preview-card" data-card="growth">
+                  <span class="card-type">成长引导卡</span>
+                  <h3>先别急着研究全部系统，这几个任务最适合你现在完成</h3>
+                  <p>
+                    从宝典任务和新手绑定奖励开始，用最少的理解成本拿到第一批赛季收益。先完成低门槛任务，再逐步解锁复杂玩法。
+                  </p>
+                  <div class="preview-meta">
+                    <span>奖励重点：免费成长奖励 / 入坑礼包</span>
+                    <span>推送时机：首次活跃 24 小时内</span>
+                  </div>
+                </div>
+
+                <div class="preview-card" data-card="return">
+                  <span class="card-type">回归召回卡</span>
+                  <h3>这次回来不用从头补课，系统已经替你追了一大截</h3>
+                  <p>
+                    回归后先领取登录福利，再通过轻量任务和进度补全机制快速找回节奏。你不需要把过去缺失的内容全部重刷一遍。
+                  </p>
+                  <div class="preview-meta">
+                    <span>奖励重点：登录即领 / 追赶机制 / 社交召回</span>
+                    <span>推送时机：回流首登后 15 分钟内</span>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="reason-card">
+                <div class="reason-copy active" data-reason="rank">
+                  <p class="mini-title">系统为什么推给你</p>
+                  <p>近 7 日排位活跃高，当前段位接近下一档领奖门槛。</p>
+                  <div class="reason-badges">
+                    <span>段位边缘</span>
+                    <span>周末高活跃</span>
+                    <span>冲分动机强</span>
+                  </div>
+                </div>
+                <div class="reason-copy" data-reason="fun">
+                  <p class="mini-title">系统为什么推给你</p>
+                  <p>最近更偏娱乐玩法，且周末组队活跃明显。</p>
+                  <div class="reason-badges">
+                    <span>娱乐偏好</span>
+                    <span>好友联动</span>
+                    <span>新鲜感驱动</span>
+                  </div>
+                </div>
+                <div class="reason-copy" data-reason="growth">
+                  <p class="mini-title">系统为什么推给你</p>
+                  <p>注册时间短，对局深度低，当前更需要明确成长路径。</p>
+                  <div class="reason-badges">
+                    <span>新注册</span>
+                    <span>低理解成本</span>
+                    <span>任务驱动</span>
+                  </div>
+                </div>
+                <div class="reason-copy" data-reason="return">
+                  <p class="mini-title">系统为什么推给你</p>
+                  <p>历史活跃高但近期沉默，存在较高回流价值与承接需求。</p>
+                  <div class="reason-badges">
+                    <span>回流价值高</span>
+                    <span>进度断层</span>
+                    <span>适合召回</span>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="section generation-section">
+          <div class="section-heading">
+            <p class="eyebrow">Content Generation</p>
+            <h2>AI 不只决定推什么，也决定怎么说</h2>
+          </div>
+          <div class="generation-grid">
+            <article class="panel generation-card">
+              <p class="mini-title">母活动</p>
+              <h3>2026 天选福星「恭喜发财」</h3>
+              <p>
+                高福利、快节奏、易成型的新春限时玩法；开局高费弈子与专属神器，金币收益和高星获取概率提升。
+              </p>
+            </article>
+            <article class="panel generation-card">
+              <p class="mini-title">上分冲段玩家版本</p>
+              <h3>先用一局爽局热手感，再回标准排位冲分</h3>
+              <p>更强调版本适应与阵容试错价值。</p>
+            </article>
+            <article class="panel generation-card">
+              <p class="mini-title">休闲娱乐玩家版本</p>
+              <h3>今天不卷排名，轻松追梦三星五费</h3>
+              <p>更强调爽感、轻松和好友同玩。</p>
+            </article>
+            <article class="panel generation-card">
+              <p class="mini-title">回流玩家版本</p>
+              <h3>回来先别补课，先打一局找回熟悉感</h3>
+              <p>更强调低门槛回归与重新建立节奏。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="metrics">
+          <div class="section-heading">
+            <p class="eyebrow">Evaluation & Experiment</p>
+            <h2>不是做出一张更好看的卡，而是验证它是否真的更有效</h2>
+          </div>
+          <div class="metrics-layout">
+            <div class="panel metrics-main">
+              <p class="mini-title">核心指标</p>
+              <h3>活动参与率</h3>
+              <p>
+                如果个性化推送只能提升点击，却不能提升真正的活动参与，那它就不算一套成功的运营系统。
+              </p>
+            </div>
+            <div class="metric-stack">
+              <div class="panel metric-mini">
+                <span>前置指标</span>
+                <strong>点击率 / 到达率 / 浏览完成率</strong>
+              </div>
+              <div class="panel metric-mini">
+                <span>后置指标</span>
+                <strong>任务完成率 / 回流激活率 / 7日留存</strong>
+              </div>
+              <div class="panel metric-mini">
+                <span>实验方式</span>
+                <strong>A 组统一推送 vs B 组 AI 个性化推送</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="ab-grid">
+            <article class="panel ab-card">
+              <p class="mini-title">A 组</p>
+              <h3>传统统一推送</h3>
+              <ul class="compact-list">
+                <li>固定活动逻辑</li>
+                <li>文案表达基本一致</li>
+                <li>不根据玩家状态显著变化</li>
+              </ul>
+            </article>
+            <article class="panel ab-card emphasis">
+              <p class="mini-title">B 组</p>
+              <h3>AI 个性化推送</h3>
+              <ul class="compact-list">
+                <li>基于玩家画像进行分层</li>
+                <li>候选活动按相关性排序</li>
+                <li>推送文案与触达时机动态变化</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section conclusion">
+          <div class="panel conclusion-panel">
+            <p class="eyebrow">Conclusion</p>
+            <h2>活动不该是统一广播，而该是动态分发</h2>
+            <p>
+              对《金铲铲之战》这样一个活动类型丰富、玩家动机差异显著的产品来说，AI 的价值不在于替代运营，而在于让活动更精准地找到对的人。
+            </p>
+            <div class="closing-lines">
+              <span>不是每个玩家，都该看到同一张活动卡。</span>
+              <span>不是每个活动，都该用同一种方式被表达。</span>
+              <span>不是每次推送，都该在同一个时机发生。</span>
+            </div>
+            <div class="footer-links">
+              <div>
+                <p class="mini-title">在线版演示链接</p>
+                <span>待部署后填入短链接</span>
+              </div>
+              <div>
+                <p class="mini-title">二维码占位</p>
+                <span>可在 PDF 首页或尾页放置</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

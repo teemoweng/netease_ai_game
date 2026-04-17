@@ -1,0 +1,56 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1440" height="900" fill="url(#bg)"/>
+<rect width="1440" height="900" fill="url(#mist)"/>
+<g opacity="0.7">
+<path d="M872 118L1170 287L1170 611L872 782L570 611V287L872 118Z" fill="url(#boardGlow)"/>
+<path d="M872 186L1110 321V576L872 712L633 576V321L872 186Z" fill="#FFF6DE" fill-opacity="0.34" stroke="#FFF8E6" stroke-opacity="0.7" stroke-width="6"/>
+<path d="M872 227L1045 325V549L872 648L698 549V325L872 227Z" fill="#BCEFF3" fill-opacity="0.32" stroke="#F6C55B" stroke-opacity="0.55" stroke-width="4"/>
+</g>
+<g opacity="0.38" stroke="#FFFFFF" stroke-opacity="0.55"><path d="M743 260L743 617"/><path d="M872 227L872 648"/><path d="M1000 260L1000 617"/><path d="M703 356H1041"/><path d="M703 454H1041"/><path d="M703 551H1041"/></g>
+<g opacity="0.85">
+<circle cx="1128" cy="168" r="78" fill="#FFF6D8" fill-opacity="0.46"/>
+<circle cx="1147" cy="185" r="48" fill="#F4C657"/>
+<path d="M1137 142L1154 165L1183 169L1163 190L1168 218L1140 206L1114 220L1118 191L1097 170L1126 165L1137 142Z" fill="#FFF8E6"/>
+</g>
+<g opacity="0.78">
+<circle cx="1208" cy="554" r="70" fill="#B6F2FF" fill-opacity="0.34"/>
+<circle cx="1237" cy="586" r="42" fill="#EFD1FF" fill-opacity="0.76"/>
+<circle cx="1273" cy="536" r="26" fill="#F6C55B"/>
+</g>
+<path d="M0 900V586C113 562 203 518 328 464C469 404 627 391 774 445C886 486 1034 588 1197 587C1284 586 1350 556 1440 520V900H0Z" fill="url(#bottomCloud)"/>
+<g opacity="0.9">
+<rect x="100" y="166" width="286" height="446" rx="42" fill="url(#leftPanel)"/>
+<rect x="123" y="196" width="240" height="14" rx="7" fill="#C19AFF" fill-opacity="0.34"/>
+<rect x="123" y="242" width="194" height="34" rx="17" fill="#FFF6E1"/>
+<rect x="123" y="297" width="226" height="20" rx="10" fill="#5ED8E4" fill-opacity="0.5"/>
+<rect x="123" y="343" width="200" height="20" rx="10" fill="#5ED8E4" fill-opacity="0.34"/>
+<rect x="123" y="398" width="212" height="88" rx="24" fill="#FFF9ED" fill-opacity="0.78"/>
+<rect x="123" y="506" width="106" height="42" rx="21" fill="#F6C55B"/>
+<rect x="246" y="506" width="122" height="42" rx="21" fill="#A7EFFF"/>
+</g>
+<defs>
+<linearGradient id="bg" x1="166" y1="24" x2="1169" y2="900" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFF6DE"/>
+<stop offset="0.35" stop-color="#B6F4FF"/>
+<stop offset="0.68" stop-color="#E7D9FF"/>
+<stop offset="1" stop-color="#FFF4DC"/>
+</linearGradient>
+<radialGradient id="mist" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(704 108) rotate(90) scale(544 838)">
+<stop stop-color="#FFFFFF" stop-opacity="0.66"/>
+<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="boardGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(872 450) rotate(90) scale(332 332)">
+<stop stop-color="#F7CF77"/>
+<stop offset="0.58" stop-color="#8BE7F0"/>
+<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="leftPanel" x1="100" y1="166" x2="386" y2="612" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF" stop-opacity="0.82"/>
+<stop offset="1" stop-color="#FFF3D9" stop-opacity="0.42"/>
+</linearGradient>
+<linearGradient id="bottomCloud" x1="720" y1="520" x2="720" y2="900" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFF8E7" stop-opacity="0"/>
+<stop offset="1" stop-color="#F7E3B6"/>
+</linearGradient>
+</defs>
+</svg>
